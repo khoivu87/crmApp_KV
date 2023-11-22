@@ -149,33 +149,32 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Fullname</th>
-                                            <th>Username</th>
+                                            <th>Last Name</th>
+                                            <th>First Name</th>
+                                            <th>Email</th>
                                             <th>Phone</th>
                                             <th>Role</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    	<c:forEach var="item" items="${users}">
+                                    	<c:forEach var="user" items="${users}">
 											<tr>
-												<td>${item.id }</td>
-												<td>${item.fullname }</td>
-												<td>${item.email }</td>
-												<td>${item.phone }</td>
-												<td>${item.roleName }</td>
-												<td><!--<c:if test="${USER.roleName == 'ROLE_ADMIN' }">
-														<a href="<c:url value="/user/edit?id=${item.id}"/>"
+												<td>${user.id }</td>
+												<td>${user.lastname }</td>
+												<td>${user.firstname }</td>
+												<td>${user.email }</td>
+												<td>${user.phone }</td>
+												<td>${user.roleName }</td>
+												<td><c:if test="${USER.roleName == 'ROLE_ADMIN' }">
+														<a href="<c:url value="/user/edit?id=${user.id}"/>"
 															class="btn btn-sm btn-primary">Sửa</a>
-														<a href="<c:url value="/user/delete?id=${item.id}"/>"
+														<a href="<c:url value="/user/delete?id=${user.id}"/>"
 															class="btn btn-sm btn-danger">Xóa</a>
-													</c:if>-->
-													<a href="<c:url value="/user/edit?id=${item.id}"/>"
-															class="btn btn-sm btn-primary">Sửa</a>
-													<a href="<c:url value="/user/delete?id=${item.id}"/>"
-															class="btn btn-sm btn-danger">Xóa</a>
-													<a href="<c:url value="/user/detail?id=${item.id}"/>"
-													class="btn btn-sm btn-info">Xem</a></td>
+													</c:if>
+														<a href="<c:url value="/user/detail?id=${user.id}"/>"
+															class="btn btn-sm btn-info">Xem</a>
+												</td>
 											</tr>
 										</c:forEach>
                                     </tbody>
@@ -211,5 +210,4 @@
         });
     </script>
 </body>
-
 </html>
