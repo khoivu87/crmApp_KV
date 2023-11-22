@@ -48,7 +48,7 @@ public class UserController extends HttpServlet {
 		
 		switch (action) {
 		case UrlConstants.USER_URL: 
-			req.setAttribute("users", userService.findAll());
+			req.setAttribute("users", userService.findAllName());
 			req.getRequestDispatcher("/WEB-INF/views/user/userIndex.jsp").forward(req, resp);
 			break; 
 		case UrlConstants.USER_ADD_URL: 

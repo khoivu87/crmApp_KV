@@ -30,6 +30,12 @@ public class UserService {
 		return dtos; 
 	}
 	
+	public List<UserDto> findAllName(){
+		List<UserDto> dtos = userDao.findAllName(); 
+		
+		return dtos; 
+	}
+	
 	public UserDto findById(String id) {
 		UserDto dto = userDao.findById(id); 		
 		

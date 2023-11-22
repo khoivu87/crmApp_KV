@@ -50,6 +50,42 @@ public class UserDao {
 		return models;
 	}
 	
+	public List<UserDto> findAllName(){
+		List<UserDto> models = new LinkedList<UserDto>();
+		try {
+			
+			Connection connection = MysqlConfig.getConnection(); 
+			String query = "SELECT * FROM users as u JOIN roles as r ON u.role_id = r.id"; 
+		
+			PreparedStatement statement = connection.prepareStatement(query); 
+		
+			ResultSet resultSet = statement.executeQuery(); 
+			
+			while(resultSet.next()) {
+				UserDto model = new UserDto(); 	
+				model.setId(resultSet.getInt("id"));
+				model.setEmail(resultSet.getString("email"));
+				model.setPassword(resultSet.getString("password"));
+				model.setFirstname(resultSet.getString("fullname"));
+				model.setLastname(resultSet.getString("fullname"));
+				model.setPhone(resultSet.getString("phone"));
+				model.setAddress(resultSet.getString("address"));
+				model.setAvatar(resultSet.getString("avatar"));
+				model.setRole_id(resultSet.getInt("role_id"));
+				model.setRoleName(resultSet.getString("r.name"));
+				
+				models.add(model); 
+			}
+			
+			connection.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return models;
+	}
+	
 	public int insert(User model) {
 		String query =  "INSERT INTO users (email,password,fullname,phone,address,avatar,role_id) VALUES (?,?,?,?,?,?,?)";
 		try(Connection connection = MysqlConfig.getConnection()) {
