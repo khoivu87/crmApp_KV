@@ -158,13 +158,15 @@
                                 <h5 class="text-muted vb">CHƯA BẮT ĐẦU</h5>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-danger">${job.getChuaThucHien()}%</h3>
+                                <h3 class="text-right m-t-15 text-danger">
+                                	<span class="counter">${job.getChuaThucHien()}</span>%
+                                </h3>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
                                         aria-valuemin="0" aria-valuemax="100" 
-                                        style="width: ${job.getChuaThucHien() }%"></div>
+                                        style="width: ${job.getChuaThucHien()}%"></div>
                                 </div>
                             </div>
                         </div>
@@ -180,13 +182,15 @@
                                 <h5 class="text-muted vb">ĐANG THỰC HIỆN</h5>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-megna">${job.getDangThucHien()  }%</h3>
+                                <h3 class="text-right m-t-15 text-megna">
+                                	<span class="counter">${job.getDangThucHien()}</span>%
+                                </h3>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-megna" role="progressbar" aria-valuenow="40"
                                         aria-valuemin="0" aria-valuemax="100" 
-                                        style="width: ${job.getDangThucHien()  }%"></div>
+                                        style="width: ${job.getDangThucHien()}%"></div>
                                 </div>
                             </div>
                         </div>
@@ -202,13 +206,15 @@
                                 <h5 class="text-muted vb">ĐÃ HOÀN THÀNH</h5>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-primary">${job.getDaHoanThanh() }%</h3>
+                                <h3 class="text-right m-t-15 text-primary">
+                                	<span class="counter">${job.getDaHoanThanh()}</span>%
+                                </h3>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40"
                                         aria-valuemin="0" aria-valuemax="100" 
-                                        style="width: ${job.getDaHoanThanh()  }%"></div>
+                                        style="width: ${job.getDaHoanThanh()}%"></div>
                                 </div>
                             </div>
                         </div>
