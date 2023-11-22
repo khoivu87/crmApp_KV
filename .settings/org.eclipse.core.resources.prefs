@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/error/error403.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/home/homeIndex.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/job/jobAdd.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/profile/profileEdit.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/role/roleAdd.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/task/taskAdd.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/task/taskIndex.jsp=UTF-8
