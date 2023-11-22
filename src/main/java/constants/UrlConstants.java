@@ -47,5 +47,6 @@ public class UrlConstants {
 	public static final String PROFILE_TASK_UPDATE = "/profile/task/update"; 
 	
 	// ERROR URL
-	public static final String ERR_403_URL = "/error/403" ;   // 403 ERROR	
+	public static final String ERR_403_URL = "/error/403" ;   // 403 ERROR
+	public static final String BLANK_URL = "/blank" ;   // Blank Page
 }

@@ -61,7 +61,8 @@ public class AuthFilter implements Filter {
 		
 		// th3: nếu là /task thì phải có rolename là ROLE_ADMIN hoặc ROLE_LEADER
 		if(req.getServletPath().startsWith("/task") && !roleName.equals("ROLE_ADMIN") && !roleName.equals("ROLE_LEADER")) {
-				resp.sendRedirect(req.getContextPath() + "/error/403");	 
+//				resp.sendRedirect(req.getContextPath() + "/error/403");
+			resp.sendRedirect(req.getContextPath() + "/profile/task");
 				return; 
 		}	
 		
