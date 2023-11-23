@@ -70,7 +70,12 @@ public class AuthFilter implements Filter {
 		if(req.getServletPath().startsWith("/job") && !roleName.equals("ROLE_ADMIN") && !roleName.equals("ROLE_LEADER")) {
 				resp.sendRedirect(req.getContextPath() + "/error/403");	 
 				return; 
-		}	
+		}
+		
+		if(req.getServletPath().startsWith("/crm_app")) {
+			resp.sendRedirect(req.getContextPath() + "/login");	 
+			return; 
+	}
 	
 		// các trường hợp còn lại
 		chain.doFilter(request, response);
